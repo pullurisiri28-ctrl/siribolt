@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background-color: #f6f7f9;
+    color: #1a1f2e;
+  }
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #d5d9e2;
+    border-radius: 9999px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #b0b8c9;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Recharts overrides */
+.recharts-default-tooltip {
+  border-radius: 12px !important;
+  border: 1px solid #eceef2 !important;
+  box-shadow: 0 8px 24px rgba(13,17,28,0.10) !important;
+}
+.recharts-cartesian-axis-tick-value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  fill: #67738d;
+}
